@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar un Pedido</title>
+    <script>
+        function mostrarDatos(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            const form = document.getElementById('pedidoForm');
+            const nombre = form.nombre.value;
+            const plato = form.plato.value;
+            const cantidad = form.cantidad.value;
+            const observaciones = form.observaciones.value;
+
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = `
+                <h3>Datos del Pedido:</h3>
+                <p><strong>Nombre:</strong> ${nombre}</p>
+                <p><strong>Plato:</strong> ${plato}</p>
+                <p><strong>Cantidad:</strong> ${cantidad}</p>
+                <p><strong>Observaciones:</strong> ${observaciones}</p>
+            `;
+        }
+    </script>
+</head>
+<body>
+
+<h1>Realizar un Pedido</h1>
+
+<form id="pedidoForm" onsubmit="mostrarDatos(event)">
+    
+</form>
+
+<div id="resultado"></div>
+
+</body>
+</html>

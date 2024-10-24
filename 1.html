@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h2>Formulario</h2>
+	<form id="formulario" onsubmit="mostrarDatos">
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" required minlength="2" maxlength="5" autocomplete="off" placeholder="Escribe tu nombre"><br><br>
+
+		<label for="apellidos">Apellidos:</label>
+		<input type="text" id="apellidos"><br><br>
+		
+		<label for="email">Email:</label>
+		<input type="text" id="email" placeholder="algo@gmail.com"><br><br>
+		
+		<label for="edad">Edad:</label>
+		<input type="number" id="edad" min="15" max="100"><br><br>
+
+		<label for="password">Contraseña:</label>
+		<input type="password" id="edad" min="15" max="100"><br><br>
+		
+		<label for="fecha">Fecha:</label>
+		<input type="date" id="fecha" min="1990-01-01" max="2023-12-31"><br><br>
+
+		<label for="genero">Género:</label>
+		<input type="radio" id="masculino" name="genero" value="Masculino">
+		<label for="genero">Masculino:</label>
+		<input type="radio" id="femenino" name="genero" value="Femenino">
+		<label for="genero">Femenino:</label>
+		<input type="radio" id="otro" name="genero" value="otro">
+		<label for="genero">Otro:</label><br><br>
+
+		<label for="asignatura">Asignatura favorita</label>
+		<select id="asignatura">
+			<option value="031">HLC</option>
+			<option value="032" disabled>Seguridad Informatica</option>
+			<option value="033">La de Jose Luis</option>
+			<option value="034" selected>Aplicaciones Web</option>
+		</select><br><br>
+
+		<label for="color">Colot favorito:</label>
+		<input type="color" id="color"><br><br>
+
+		<label for="terminos">Acepto los términos:</label>
+		<input type="checkbox" id="terminos"><br><br>
+
+		<input type="submit" value="Registrarse">
+
+
+
+	</form>
+</body>
+</html>
