@@ -45,7 +45,7 @@
 </head>
 <body>
 	<h2>Formulario</h2>
-	<form id="formulario" onsubmit="mostrarDatos">
+	<form id="formulario" onsubmit="mostrarDatos(event)">
 		<label for="nombre">Nombre:</label>
 		<input type="text" id="nombre" required minlength="3" maxlength="50" autocomplete="on" placeholder="Escribe tu nombre completo"><br><br>
 
@@ -53,7 +53,7 @@
 		<input type="text" id="email" required minlength="6" maxlength="20" autocomplete="on" placeholder="email@ejemplo.com"><br><br>
 		
         <label for="password">Contraseña:</label>
-		<input type="password" id="edad" required minlength="6" maxlength="20" placeholder="Contraseña de 6 a 20 caracteres"><br><br>
+		<input type="password" id="password" required minlength="6" maxlength="20" placeholder="Contraseña de 6 a 20 caracteres"><br><br>
 
 		<label for="edad">Edad:</label>
 		<input type="number" id="edad" required minlength="1" maxlength="120" placeholder="Introduce tu edad"><br><br>
@@ -68,10 +68,10 @@
 		</select><br><br>
 
 		<label for="fecha">Fecha de nacimiento:</label>
-		<input type="date" id="fecha" minlength="01-01-1990" maxlength="2023-12-31" required><br><br>
+		<input type="date" id="fecha_nacimiento" minlength="01-01-1990" maxlength="2023-12-31" required><br><br>
 
 		<label for="color">Color favorito:</label>
-		<input type="color" id="color" required><br><br>
+		<input type="color" id="color_favorito" required><br><br>
 
         <label for="genero">Género:</label><br>
 		<input type="radio" id="masculino" name="genero" value="Masculino" required>
@@ -88,6 +88,5 @@
 
 <!-- Div donde se mostrarán los datos ingresados -->
     <div id="resultado"></div>
-
 </body>
 </html>
